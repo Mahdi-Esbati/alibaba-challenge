@@ -1,0 +1,5 @@
+.CountryList {
+  display: grid;
+  grid-template-rows: 4;
+  grid-template-columns: auto;
+}

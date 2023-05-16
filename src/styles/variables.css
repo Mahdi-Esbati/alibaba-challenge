@@ -6,6 +6,10 @@
 
   --text-body: 14px;
   --text-heading: 16px;
+  --text-title: 24px;
+
+  --spacing: 4px;
+  --max-width: 1232px;
 }
 
 [data-theme='dark'] {

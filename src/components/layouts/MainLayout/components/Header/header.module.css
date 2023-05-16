@@ -1,0 +1,6 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: calc(var(--spacing) * 6);
+}

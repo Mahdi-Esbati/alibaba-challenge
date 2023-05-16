@@ -1,8 +1,10 @@
+import CountryList from './pages/CountryList';
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-heading">Alibaba Test App</h1>
-    </div>
+    <>
+      <CountryList />
+    </>
   );
 };
 
