@@ -13,6 +13,8 @@
   --max-width: 1232px;
 
   --shadow-main: 0 0 15px 0 var(--color-shadow);
+
+  color: var(--color-text);
 }
 
 [data-theme='dark'] {

@@ -4,12 +4,15 @@ import { Outlet } from 'react-router-dom';
 
 import Styles from './main-layout.module.css';
 import classNames from '../../../utils/classNames';
+import useDarkMode from '../../../hooks/useDarkMode';
 
 const MainLayout = () => {
+  const { isDarkModeEnabled, toggleDarkMode } = useDarkMode();
+
   return (
     <div className={Styles.MainLayout}>
       <Header title="Where in the world?">
-        <Button>Dark Mode</Button>
+        <Button onClick={toggleDarkMode}>{isDarkModeEnabled ? 'Light Mode' : 'Dark Mode'} </Button>
       </Header>
 
       <main className={classNames('d-flex jc-center', Styles.MainLayout__content)}>
