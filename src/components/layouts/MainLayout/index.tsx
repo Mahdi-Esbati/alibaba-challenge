@@ -1,19 +1,17 @@
-import type React from 'react';
 import Header from './components/Header';
 import Button from '../../uikit/Button';
+import { Outlet } from 'react-router-dom';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const MainLayout: React.FC<Props> = ({ children }) => {
+const MainLayout = () => {
   return (
     <div>
       <Header title="Where in the world?">
         <Button>Dark Mode</Button>
       </Header>
 
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 };

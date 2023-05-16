@@ -1,15 +1,23 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import CountryList from './pages/CountryList';
 import CountryDetails from './pages/CountryDetails';
+import MainLayout from './components/layouts/MainLayout';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <CountryList />,
-  },
-  {
-    path: '/details/*',
-    element: <CountryDetails />,
+    element: <MainLayout />,
+
+    children: [
+      {
+        path: 'details/:countryName',
+        element: <CountryDetails />,
+      },
+      {
+        path: '/',
+        element: <CountryList />,
+      },
+    ],
   },
 ]);
 
