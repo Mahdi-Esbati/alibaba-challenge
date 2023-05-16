@@ -14,7 +14,7 @@
 
   --shadow-main: 0 0 15px 0 var(--color-shadow);
 
-  --transition-main: 0.4s ease-in-out;
+  --transition-main: 0.3s ease-in-out;
 }
 
 [data-theme='dark'] {
