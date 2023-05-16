@@ -1,6 +1,14 @@
 .Header {
+  position: sticky;
+  top: 0;
+
+  background-color: var(--color-primary);
+  padding: calc(var(--spacing) * 6);
+}
+
+.Header > div {
   display: flex;
   justify-content: space-between;
 
-  padding: calc(var(--spacing) * 6);
+  max-width: var(--max-width);
 }

@@ -1,7 +1,10 @@
 .CountryListItem {
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   border-radius: calc(var(--spacing) * 2);
   overflow: hidden;
+
+  text-decoration: unset;
+  color: var(--color-text);
 }
 
 .CountryListItem > img {

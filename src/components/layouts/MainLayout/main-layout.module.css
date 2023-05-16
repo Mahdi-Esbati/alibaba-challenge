@@ -1,0 +1,7 @@
+.MainLayout__content {
+  background-color: var(--color-background);
+}
+
+.MainLayout__content > div {
+  max-width: var(--max-width);
+}

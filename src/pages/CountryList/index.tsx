@@ -4,7 +4,7 @@ import Styles from './country-list.module.css';
 
 const CountryList = () => {
   return (
-    <div className={classNames('d-flex flex-column', Styles.CountryList__container)}>
+    <div className={classNames('d-flex flex-column ai-center', Styles.CountryList__container)}>
       <section className={classNames('d-flex jc-between', Styles.CountryList__form)}>
         <input type="text" />
         <select>

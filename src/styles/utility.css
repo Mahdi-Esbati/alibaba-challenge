@@ -17,6 +17,23 @@
   flex-direction: column;
 }
 
+.jc-center {
+  justify-content: center;
+}
+
 .jc-between {
   justify-content: space-between;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+/* shadow utility classes */
+.shadow-main {
+  box-shadow: var(--shadow-main);
 }

@@ -1,6 +1,6 @@
 .CountryList__container {
   padding: 0 calc(var(--spacing) * 18);
-  background-color: var(--background-color);
+  background-color: var(--color-background);
 }
 
 .CountryList__form {
