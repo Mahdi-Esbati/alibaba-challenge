@@ -3,3 +3,13 @@
 * {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.text-body {
+  font-size: var(--text-body);
+  font-weight: 300;
+}
+
+.text-heading {
+  font-size: var(--text-heading);
+  font-weight: 800;
+}
