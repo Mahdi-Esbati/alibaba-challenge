@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import Styles from './country-details.module.css';
+import classNames from '../../utils/classNames';
 
 const CountryDetails = () => {
   const renderDetailItem = (title: string, value: string) => (
@@ -10,30 +12,30 @@ const CountryDetails = () => {
 
   return (
     <main>
-      <div>
+      <div className={classNames('d-flex', Styles.CountryDetails__actionRow)}>
         <Link to="/">Back</Link>
+      </div>
 
-        <div>
-          <img src="" alt="" />
-          <section>
-            <h2>Belgium</h2>
+      <div className={classNames('d-flex', Styles.CountryDetails__content)}>
+        <img className="grow-1" src="https://flagcdn.com/w320/us.png" alt="" />
+        <section className="grow-1">
+          <h2 className={Styles.CountryDetails__content__title}>Belgium</h2>
 
-            <div>
-              {renderDetailItem('Native Name', 'Belgie')}
-              {renderDetailItem('Native Name', 'Belgie')}
-              {renderDetailItem('Native Name', 'Belgie')}
-              {renderDetailItem('Native Name', 'Belgie')}
-              {renderDetailItem('Native Name', 'Belgie')}
-              {renderDetailItem('Native Name', 'Belgie')}
-            </div>
+          <div className={Styles.CountryDetails__content__itemList}>
+            {renderDetailItem('Native Name', 'Belgie')}
+            {renderDetailItem('Native Name', 'Belgie')}
+            {renderDetailItem('Native Name', 'Belgie')}
+            {renderDetailItem('Native Name', 'Belgie')}
+            {renderDetailItem('Native Name', 'Belgie')}
+            {renderDetailItem('Native Name', 'Belgie')}
+          </div>
 
-            <div>
-              <span className="text-body-bold">Border Countries:</span>
-              <span>France</span>
-              <span>Germany</span>
-            </div>
-          </section>
-        </div>
+          <div className={Styles.CountryDetails__content__borderCountries}>
+            <span className="text-body-bold">Border Countries: </span>
+            <span>France</span>
+            <span>Germany</span>
+          </div>
+        </section>
       </div>
     </main>
   );
