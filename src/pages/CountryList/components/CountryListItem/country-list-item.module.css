@@ -1,0 +1,14 @@
+.CountryListItem {
+  background-color: var(--primary-color);
+  border-radius: var(--spacing);
+  overflow: hidden;
+}
+
+.CountryListItem > img {
+  object-fit: cover;
+  aspect-ratio: 320 / 183;
+}
+
+.CountryListItem__content {
+  padding: calc(var(--spacing) * 7);
+}

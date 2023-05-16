@@ -1,4 +1,5 @@
 import MainLayout from '../../components/layouts/MainLayout';
+import CountryListItem from './components/CountryListItem';
 import Styles from './country-list.module.css';
 
 const CountryList = () => {
@@ -14,12 +15,15 @@ const CountryList = () => {
         </section>
 
         <section className={Styles.CountryList}>
-          <div>country1</div>
-          <div>country2</div>
-          <div>country3</div>
-          <div>country4</div>
-          <div>country5</div>
-          <div>country6</div>
+          {Array.from({ length: 10 }).map(() => (
+            <CountryListItem
+              flag="https://flagcdn.com/w320/us.png"
+              name="United States"
+              region="America"
+              population="400,000,000"
+              capital="Washington"
+            />
+          ))}
         </section>
       </div>
     </MainLayout>

@@ -1,5 +1,12 @@
 .CountryList {
+  --gap: calc(var(--spacing) * 18);
+
+  background-color: var(--background-color);
+
   display: grid;
-  grid-template-rows: 4;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+
+  gap: var(--gap);
+  padding: var(--gap);
 }

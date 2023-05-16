@@ -9,6 +9,11 @@
   font-weight: 300;
 }
 
+.text-body-bold {
+  font-size: var(--text-body);
+  font-weight: 600;
+}
+
 .text-heading {
   font-size: var(--text-heading);
   font-weight: 800;
