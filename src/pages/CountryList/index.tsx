@@ -1,12 +1,13 @@
 import MainLayout from '../../components/layouts/MainLayout';
+import classNames from '../../utils/classnames';
 import CountryListItem from './components/CountryListItem';
 import Styles from './country-list.module.css';
 
 const CountryList = () => {
   return (
     <MainLayout>
-      <div className="d-flex flex-column">
-        <section className="d-flex jc-between">
+      <div className={classNames('d-flex flex-column', Styles.CountryList__container)}>
+        <section className={classNames('d-flex jc-between', Styles.CountryList__form)}>
           <input type="text" />
           <select>
             <option value="folan">Item1</option>
@@ -14,7 +15,7 @@ const CountryList = () => {
           </select>
         </section>
 
-        <section className={Styles.CountryList}>
+        <section className={Styles.CountryList__list}>
           {Array.from({ length: 10 }).map(() => (
             <CountryListItem
               flag="https://flagcdn.com/w320/us.png"
