@@ -1,14 +1,23 @@
+.CountryDetails {
+  --gap: calc(var(--spacing) * 19);
+  padding: var(--gap);
+}
+
 .CountryDetails__actionRow {
-  padding: calc(var(--spacing) * 19) 0;
+  margin-bottom: var(--gap);
 }
 
 .CountryDetails__content {
-  gap: calc(var(--spacing) * 28);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  align-items: center;
+  gap: var(--gap);
 }
 
 .CountryDetails__content__title,
 .CountryDetails__content__borderCountries {
-  padding: calc(var(--spacing) * 8) 0;
+  padding-bottom: calc(var(--spacing) * 8);
 }
 
 .CountryDetails__content__itemList {

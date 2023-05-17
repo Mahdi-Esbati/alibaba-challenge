@@ -1,4 +1,4 @@
-import countryListAPI from '../../api/countryList';
+import { getCountryListAPI } from '../../api/countryList';
 import Input from '../../components/uikit/Input';
 import Select from '../../components/uikit/Select';
 import useAPI from '../../hooks/useAPI';
@@ -7,7 +7,7 @@ import CountryListItem from './components/CountryListItem';
 import Styles from './country-list.module.css';
 
 const CountryList = () => {
-  const { data } = useAPI({ apiRequestObject: countryListAPI, fetchOnMount: true });
+  const { data } = useAPI({ apiRequestObject: getCountryListAPI, fetchOnMount: true });
 
   return (
     <div className={classNames('d-flex flex-column ai-center', Styles.CountryList__container)}>

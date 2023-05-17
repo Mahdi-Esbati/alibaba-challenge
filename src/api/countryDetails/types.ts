@@ -1,4 +1,4 @@
-interface CountryListItem {
+interface CountryDetails {
   flags: {
     png: string;
     svg: string;
@@ -15,9 +15,21 @@ interface CountryListItem {
       }
     >;
   };
+  currencies: Record<
+    string,
+    {
+      name: string;
+      symbol: string;
+    }
+  >;
   capital: string[];
   region: string;
+  subregion: string;
+  languages: {
+    eng: string;
+  };
+  borders: string[];
   population: number;
 }
 
-export type CountryListResponse = CountryListItem[];
+export type CountryDetailsResponse = [CountryDetails];

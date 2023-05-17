@@ -1,5 +1,5 @@
 import { ApiRequestObject } from '../../utils/httpService';
-import { CountryListResponse } from './types';
+import { CountryDetailsResponse } from './types';
 
 const REQUIRED_FIELDS = [
   'name',
@@ -14,9 +14,14 @@ const REQUIRED_FIELDS = [
   'flags',
 ];
 
-const countryDetailsAPI: (name: string) => ApiRequestObject<object, CountryListResponse> = (name) => ({
+const getCountryDetailsByNameAPI: (name: string) => ApiRequestObject<object, CountryDetailsResponse> = (name) => ({
   endpoint: `name/${name}?fullText=true&fields=${REQUIRED_FIELDS.join(',')}`,
   method: 'GET',
 });
 
-export default countryDetailsAPI;
+const getCountryDetailsByCCN3API: (name: string) => ApiRequestObject<object, CountryDetailsResponse> = (name) => ({
+  endpoint: `alpha/${name}&fields=${REQUIRED_FIELDS.join(',')}`,
+  method: 'GET',
+});
+
+export { getCountryDetailsByNameAPI, getCountryDetailsByCCN3API };
