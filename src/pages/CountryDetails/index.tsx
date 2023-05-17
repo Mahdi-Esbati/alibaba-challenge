@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Styles from './country-details.module.css';
 import classNames from '../../utils/classNames';
+import Button from '../../components/uikit/Button';
 
 const CountryDetails = () => {
   const renderDetailItem = (title: string, value: string) => (
@@ -13,7 +14,9 @@ const CountryDetails = () => {
   return (
     <main>
       <div className={classNames('d-flex', Styles.CountryDetails__actionRow)}>
-        <Link to="/">Back</Link>
+        <Link to="/">
+          <Button>Back</Button>
+        </Link>
       </div>
 
       <div className={classNames('d-flex', Styles.CountryDetails__content)}>
