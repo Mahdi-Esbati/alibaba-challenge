@@ -1,0 +1,17 @@
+.CountryList__container {
+  padding: 0 calc(var(--spacing) * 18);
+  background-color: var(--color-background);
+}
+
+.CountryList__form {
+  padding: calc(var(--spacing) * 12) 0;
+}
+
+.CountryList__list {
+  --gap: calc(var(--spacing) * 18);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+
+  gap: var(--gap);
+}
