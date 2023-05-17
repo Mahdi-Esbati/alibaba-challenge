@@ -3,5 +3,7 @@
 }
 
 .MainLayout__content > div {
-  max-width: var(--max-width);
+  --gap: calc(var(--spacing) * 18);
+  max-width: calc(var(--max-width));
+  padding: 0 var(--gap);
 }

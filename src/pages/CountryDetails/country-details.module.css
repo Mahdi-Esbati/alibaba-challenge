@@ -1,6 +1,6 @@
 .CountryDetails {
   --gap: calc(var(--spacing) * 19);
-  padding: var(--gap);
+  padding: var(--gap) 0;
 }
 
 .CountryDetails__actionRow {

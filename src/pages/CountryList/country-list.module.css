@@ -1,5 +1,4 @@
 .CountryList__container {
-  padding: 0 calc(var(--spacing) * 18);
   background-color: var(--color-background);
 }
 
