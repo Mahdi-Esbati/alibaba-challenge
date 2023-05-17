@@ -2,8 +2,17 @@ import { Link } from 'react-router-dom';
 import Styles from './country-details.module.css';
 import classNames from '../../utils/classNames';
 import Button from '../../components/uikit/Button';
+import useAPI from '../../hooks/useAPI';
+import countryDetailsAPI from '../../api/countryDetails';
+import { useEffect } from 'react';
 
 const CountryDetails = () => {
+  const { data } = useAPI({ apiRequestObject: countryDetailsAPI('united states'), fetchOnMount: true });
+
+  useEffect(() => {
+    console.log({ details: data });
+  }, [data]);
+
   const renderDetailItem = (title: string, value: string) => (
     <div>
       <span className="text-body-bold">{title}: </span>
