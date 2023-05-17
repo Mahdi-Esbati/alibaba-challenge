@@ -1,16 +1,25 @@
 :root {
-  --primary-color: hsl(0, 0%, 100%);
-  --background-color: hsl(0, 0%, 98%);
-  --text-color: hsl(200, 15%, 8%);
-  --input-color: hsl(0, 0%, 52%);
+  --color-primary: hsl(0, 0%, 100%);
+  --color-background: hsl(0, 0%, 98%);
+  --color-text: hsl(200, 15%, 8%);
+  --color-input: hsl(0, 0%, 52%);
+  --color-shadow: #00000010;
 
   --text-body: 14px;
   --text-heading: 16px;
+  --text-title: 24px;
+
+  --spacing: 4px;
+  --max-width: 1232px;
+
+  --shadow-main: 0 0 15px 0 var(--color-shadow);
+
+  --transition-main: 0.3s ease-in-out;
 }
 
 [data-theme='dark'] {
-  --primary-color: hsl(209, 23%, 22%);
-  --background-color: hsl(207, 26%, 17%);
-  --text-color: hsl(0, 0%, 100%);
-  --input-color: hsl(0, 0%, 52%);
+  --color-primary: hsl(209, 23%, 22%);
+  --color-background: hsl(207, 26%, 17%);
+  --color-text: hsl(0, 0%, 100%);
+  --color-input: hsl(0, 0%, 52%);
 }

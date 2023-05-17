@@ -1,0 +1,17 @@
+.Button {
+  padding: calc(var(--spacing) * 2);
+  color: var(--color-text);
+
+  border: none;
+  border-radius: calc(var(--spacing) * 2);
+  outline: 0;
+
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 0 var(--color-text);
+
+  transition: box-shadow var(--transition-main);
+}
+
+.Button:active {
+  box-shadow: 0 0 0 2px var(--color-text);
+}

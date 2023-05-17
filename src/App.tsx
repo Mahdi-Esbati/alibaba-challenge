@@ -1,8 +1,31 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import CountryList from './pages/CountryList';
+import CountryDetails from './pages/CountryDetails';
+import MainLayout from './components/layouts/MainLayout';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+
+    children: [
+      {
+        path: 'details/:countryName',
+        element: <CountryDetails />,
+      },
+      {
+        path: '/',
+        element: <CountryList />,
+      },
+    ],
+  },
+]);
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-heading">Alibaba Test App</h1>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 };
 
