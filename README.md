@@ -66,3 +66,13 @@ This repository contains my solution for the Alibaba's Frontend Engineer intervi
 
   You can either get the response by using the `data` variable or by calling the async `request` function.
   There is a third way, you can pass a callback to the `successCallback` function and do some work when the request is done.
+
+## Fuzzy String Search And The Use Of Web Workers
+
+The project includes a `fuzzyStringSearch` function that enables fuzzy string matching for improved search functionality. This function leverages web workers to enhance performance and responsiveness.
+
+The `fuzzyStringSearch` function compares a search string against an array of strings and returns the matching results. It takes advantage of techniques like partial matching.
+
+To achieve improved performance, the `fuzzyStringSearch` function offloads the search process to a _web worker_. Web workers allow the search to be performed in the background without blocking the main thread, ensuring a smooth user experience.
+
+Since the Web Workers rely on a messaging pattern to communicate with the normal code, the code had to be rewritten in a async way.
