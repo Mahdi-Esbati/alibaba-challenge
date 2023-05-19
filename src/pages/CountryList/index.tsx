@@ -7,13 +7,18 @@ import classNames from '../../utils/classNames';
 import CountryListItem from './components/CountryListItem';
 import Styles from './country-list.module.css';
 import useInputValue from '../../hooks/useInputValue';
-import { useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import fuzzySearchCountryItems from './utils/fuzzySearchCountryItems';
+import { CountryListItem as CountryListItemType } from '../../api/countryList/types';
 
 const CountryList = () => {
   const { ref: searchRef, value: searchValue } = useInputValue();
   const { data } = useAPI({ apiRequestObject: getCountryListAPI, fetchOnMount: true });
-  const filteredCountries = useMemo(() => fuzzySearchCountryItems(searchValue, data || []), [data, searchValue]);
+  const [filteredCountries, setFilteredCountries] = useState<CountryListItemType[]>();
+
+  useEffect(() => {
+    fuzzySearchCountryItems(searchValue, data || []).then((res) => setFilteredCountries(res));
+  }, [data, searchValue]);
 
   return (
     <div className={classNames('d-flex flex-column ai-center', Styles.CountryList__container)}>

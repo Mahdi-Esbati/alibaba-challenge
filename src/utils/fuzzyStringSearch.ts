@@ -30,4 +30,14 @@ function isFuzzyMatch(lowerCurrentString: string, lowerSearchString: string): bo
   return searchIndex === lowerSearchString.length;
 }
 
+// Event listener for receiving messages from the main thread
+self.addEventListener('message', (event) => {
+  const { searchString, array } = event.data;
+
+  const searchResults = fuzzyStringSearch(searchString, array);
+
+  // Send the search results back to the main thread
+  self.postMessage(searchResults);
+});
+
 export default fuzzyStringSearch;
