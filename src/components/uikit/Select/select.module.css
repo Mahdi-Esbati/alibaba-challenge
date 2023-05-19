@@ -12,6 +12,10 @@
   transition: box-shadow var(--transition-main);
 }
 
+.Select:hover {
+  box-shadow: 0 0 0 1px var(--color-text);
+}
+
 .Select:focus {
   box-shadow: 0 0 0 2px var(--color-text);
 }

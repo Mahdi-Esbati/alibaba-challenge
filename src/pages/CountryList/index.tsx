@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { getCountryListAPI } from '../../api/countryList';
 import Input from '../../components/uikit/Input';
 import Select from '../../components/uikit/Select';
@@ -12,7 +14,7 @@ const CountryList = () => {
   return (
     <div className={classNames('d-flex flex-column ai-center', Styles.CountryList__container)}>
       <section className={classNames('d-flex jc-between w-100', Styles.CountryList__form)}>
-        <Input placeholder="Search for a country" />
+        <Input icon={faMagnifyingGlass} placeholder="Search for a country..." />
         <Select>
           <option value="folan">Item1</option>
           <option value="bisar">Item2</option>
