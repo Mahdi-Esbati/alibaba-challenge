@@ -1,4 +1,4 @@
-interface CountryListItem {
+export interface CountryListItem {
   flags: {
     png: string;
     svg: string;

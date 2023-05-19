@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import Styles from './main-layout.module.css';
 import classNames from '../../../utils/classNames';
 import useDarkMode from '../../../hooks/useDarkMode';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 const MainLayout = () => {
   const { isDarkModeEnabled, toggleDarkMode } = useDarkMode();
@@ -12,7 +13,9 @@ const MainLayout = () => {
   return (
     <div className={Styles.MainLayout}>
       <Header title="Where in the world?">
-        <Button onClick={toggleDarkMode}>{isDarkModeEnabled ? 'Light Mode' : 'Dark Mode'} </Button>
+        <Button icon={isDarkModeEnabled ? faSun : faMoon} onClick={toggleDarkMode}>
+          {isDarkModeEnabled ? 'Light Mode' : 'Dark Mode'}{' '}
+        </Button>
       </Header>
 
       <main className={classNames('d-flex jc-center', Styles.MainLayout__content)}>

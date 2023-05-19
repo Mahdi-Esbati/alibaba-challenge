@@ -4,16 +4,13 @@ import classNames from '../../utils/classNames';
 import Button from '../../components/uikit/Button';
 import useAPI from '../../hooks/useAPI';
 import { getCountryDetailsByNameAPI } from '../../api/countryDetails';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const CountryDetails = () => {
   const { countryName } = useParams();
   const { data } = useAPI({ apiRequestObject: getCountryDetailsByNameAPI(countryName || ''), fetchOnMount: true });
   const targetCountry = useMemo(() => data?.[0], [data]);
-
-  useEffect(() => {
-    console.log({ details: data });
-  }, [data]);
 
   const renderDetailItem = (title: string, value: string) => (
     <div>
@@ -28,7 +25,9 @@ const CountryDetails = () => {
     <main className={Styles.CountryDetails}>
       <div className={classNames('d-flex', Styles.CountryDetails__actionRow)}>
         <Link to="/">
-          <Button>Back</Button>
+          <Button large icon={faArrowLeft}>
+            Back
+          </Button>
         </Link>
       </div>
 
