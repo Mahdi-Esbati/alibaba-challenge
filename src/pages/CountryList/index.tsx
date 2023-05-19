@@ -23,6 +23,7 @@ const CountryList = () => {
         {data &&
           data.map((item) => (
             <CountryListItem
+              key={JSON.stringify(item.name)}
               flag={item.flags.png}
               name={item.name.common}
               region={item.region}

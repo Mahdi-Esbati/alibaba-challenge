@@ -4,16 +4,12 @@ import classNames from '../../utils/classNames';
 import Button from '../../components/uikit/Button';
 import useAPI from '../../hooks/useAPI';
 import { getCountryDetailsByNameAPI } from '../../api/countryDetails';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
 const CountryDetails = () => {
   const { countryName } = useParams();
   const { data } = useAPI({ apiRequestObject: getCountryDetailsByNameAPI(countryName || ''), fetchOnMount: true });
   const targetCountry = useMemo(() => data?.[0], [data]);
-
-  useEffect(() => {
-    console.log({ details: data });
-  }, [data]);
 
   const renderDetailItem = (title: string, value: string) => (
     <div>

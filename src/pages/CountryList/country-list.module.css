@@ -8,9 +8,29 @@
 
 .CountryList__list {
   --gap: calc(var(--spacing) * 18);
+  --column-count: 4;
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--column-count), 1fr);
   grid-template-rows: auto;
 
   gap: var(--gap);
+}
+
+@media (max-width: 1175px) {
+  .CountryList__list {
+    --column-count: 3;
+  }
+}
+
+@media (max-width: 875px) {
+  .CountryList__list {
+    --column-count: 2;
+  }
+}
+
+@media (max-width: 660px) {
+  .CountryList__list {
+    --column-count: 1;
+  }
 }
