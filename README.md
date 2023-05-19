@@ -1,5 +1,19 @@
 # Alibaba Code Challenge
 
+### CAUTION: Please read all of the provided documentation carefully to get familiar with the project
+
+## Checklist
+
+- [x] Base UI
+- [x] Responsive UI
+- [x] Dark Theme
+- [x] API Implementation
+- [x] Design System Implementation
+- [x] Advanced Search And Filtering
+- [x] Web Workers And Performance Improvements
+- [ ] Unit Tests
+- [ ] Sort Implementation
+
 ## Introduction
 
 This repository contains my solution for the Alibaba's Frontend Engineer interview code challenge.
